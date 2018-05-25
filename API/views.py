@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from django.contrib.auth import authenticate
 from Buses.models import *
 from django.shortcuts import render
-from .models impoert UpdateStatus
+from .models import UpdateStatus
 
 
 @csrf_exempt
