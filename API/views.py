@@ -5,6 +5,7 @@ from datetime import datetime, timedelta
 from django.contrib.auth import authenticate
 from Buses.models import *
 from django.shortcuts import render
+from .models impoert UpdateStatus
 
 
 @csrf_exempt
@@ -323,8 +324,8 @@ def get_stop_data_from_time(request):
 
 @csrf_exempt
 def update_status(request):
-    if request.method == 'GET':
-        template = 'update_status.html'
-        return render(request, template, {})
-    if request.method == 'POST':
-        raise Http404("adasd")
+    template="tabularview.html"
+    status=UpdateStatus.objects.all
+    current_driver=status.new_driver
+    return render(request,template,context={"current_driver":current_driver})
+    
