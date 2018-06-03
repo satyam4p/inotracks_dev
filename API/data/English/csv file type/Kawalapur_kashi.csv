@@ -1,0 +1,7 @@
+stop, ,Kashi,Kaavalpur,Ramraja,Ahkaura,Kamalpur,Dedhval,Sakaldiha,Kachhuman,Madagda Gate,Mughal Sarai,Dulhipur,Padav
+distance, , ,,1,5,9,17,24,30,36,42,46,50
+fare,, ,,6,10,15,22,24,27,36,40,40,40
+,arr,,,6:02,6:11,6:02,6:37,6:52,7:05,7:18,7:31,7:04,7:05
+,dep, ,6,6:03,6:12,6:21,6:38,6:53,7:06,7:19,7:32,7:41,
+,arr,,,,,,,,,,,,
+,dep,,13:03,,,,,,,,,,

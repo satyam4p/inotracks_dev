@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://www.inotracks.com/tabular-view/ -->
+<html style="height: auto;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tabular View</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./Tabular View_files/jquery-2.2.3.min.js.download"></script>
+
+
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+
+   <link rel="stylesheet" href="./Tabular View_files/bootstrap.min.css">
+  <link rel="stylesheet" href="./Tabular View_files/bootstrap.min(1).css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./Tabular View_files/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="./Tabular View_files/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="./Tabular View_files/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="./Tabular View_files/_all-skins.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="./Tabular View_files/blue.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="./Tabular View_files/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="./Tabular View_files/jquery-jvectormap-1.2.2.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="./Tabular View_files/datepicker3.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="./Tabular View_files/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="./Tabular View_files/bootstrap3-wysihtml5.min.css">
+
+  <script src="./Tabular View_files/jquery.min.js.download"></script>
+  <script src="./Tabular View_files/bootstrap.min.js.download"></script>
+  <script src="./Tabular View_files/jquery.min.js.download"></script>
+  <script src="./Tabular View_files/bootstrap.min.js.download"></script>
+
+
+
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head><body class="skin-blue sidebar-mini" style="height: auto;">
+<div class="wrapper" style="height: auto;">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="http://www.inotracks.com/tabular-view/index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>I</b>no</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Ino</b>Tracks</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="http://www.inotracks.com/tabular-view/#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="http://www.inotracks.com/tabular-view/#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="./Tabular View_files/avatar04.png" class="user-image" alt="User Image">
+              <span class="hidden-xs">vctsl</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="./Tabular View_files/avatar04.png" class="img-circle" alt="User Image">
+
+                <p>
+                  Varanasi City Transport Services
+                </p>
+              </li>
+
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="http://www.inotracks.com/tabular-view/#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="http://www.inotracks.com/logout" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar" style="height: auto;">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="./Tabular View_files/avatar04.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Varanasi City Transport Services</p>
+        </div>
+      </div>
+      <!-- search form -->
+
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="active treeview">
+          <a href="http://www.inotracks.com/map">
+            <i class="fa fa-dashboard"></i> <span>Map View</span>
+          </a>
+         </li>
+        <li class="treeview">
+          <a href="http://www.inotracks.com/tabular-view">
+            <i class="fa fa-files-o"></i>
+            <span>Tabular View</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.inotracks.com/tabular-view/#">
+            <i class="fa fa-th"></i> <span>Speed</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="http://www.inotracks.com/tabular-view/#">
+            <i class="fa fa-pie-chart"></i>
+            <span>Running Buses</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="http://www.inotracks.com/time-table/">
+            <i class="fa fa-laptop"></i>
+            <span>Time Tables</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="http://www.inotracks.com/tabular-view/#">
+            <i class="fa fa-calendar"></i> <span>Routes</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.inotracks.com/tabular-view/#">
+            <i class="fa fa-envelope"></i> <span>Route Violation</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="http://www.inotracks.com/tabular-view/#">
+            <i class="fa fa-folder"></i> <span>Fuel</span>
+          </a>
+      </li></ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" style="min-height: 824px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+       Tabular View
+      </h1>
+	  </section>
+
+
+
+
+      <div style="height: 840px;max width:100%;overflow:auto;background-color:white;color:black;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+
+
+      <div class="card">
+	<div class="card-header" data-background-color="blue">
+		</div>
+	<div class="radio">
+
+
+	<div class="card-content table-responsive table-full-width">
+		<table class="table">
+			<thead class="text-danger">
+				<tr><th>Status</th>
+				<th>Bus No.</th>
+				<th>Driver Name</th>
+				<th style="width: 22%;"> Current Location</th>
+				<th>Last Update Time</th>
+				<th> Current Speed</th>
+				<th>Km. Travelled</th>
+
+
+			</tr></thead>
+			<tbody>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5692</td>
+					<td>VINOD YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 2, 2018, 6:32 p.m.</td>
+          <td>0.0</td>
+          <td>118.66042</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT7344</td>
+					<td>AVINASH SINGH</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>March 31, 2018, 12:54 a.m.</td>
+          <td>0.0</td>
+          <td>1.311819</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6035</td>
+					<td>JANSHED AKTHAR</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>March 24, 2018, 9:49 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3781</td>
+					<td>SUNIL RAO GAUTAM</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>March 24, 2018, 6:37 p.m.</td>
+          <td>0.0</td>
+          <td>15.937092</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6338</td>
+					<td>RAM KHELAWAN PATEL</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>March 24, 2018, 9:58 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5281</td>
+					<td>KALLU RAJBHAR</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>Oct. 27, 2017, 3:36 a.m.</td>
+          <td>1.14947848320007</td>
+          <td>241.03815</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4091</td>
+					<td>SANJAY KUMAR-II</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 26, 2018, 6:16 p.m.</td>
+          <td>0.0</td>
+          <td>1391.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5142</td>
+					<td>SHIVPRAKASH</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 9, 2018, 12:23 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5878</td>
+					<td>TAUFIK AHAMAD</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 28, 2018, 3:46 a.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6031</td>
+					<td>SANTOSH SINGH</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>March 26, 2018, 5:49 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5877</td>
+					<td>DINESH KUMAR PATEL</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 28, 2018, 1:23 p.m.</td>
+          <td>0.0</td>
+          <td>108.16121</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3997</td>
+					<td>SURYANATH SINGH</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 8, 2018, 4:03 p.m.</td>
+          <td>0.0</td>
+          <td>152.0061</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3996</td>
+					<td>RAMA SHANKAR YADAV</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5282</td>
+					<td>RAM PRAKASH PATHAK</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 23, 2018, 5:47 p.m.</td>
+          <td>0.0</td>
+          <td>41.33752</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4181</td>
+					<td>RAJBALI</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 8, 2018, 1:21 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT7328</td>
+					<td>PREM SHANKAR YADAV</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5649</td>
+					<td>LALJI YADAV</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6339</td>
+					<td>ASHOK KUMAR MAURYA</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT7229</td>
+					<td>AKHILESH YADAV</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6034</td>
+					<td>SUNIL KUMAR MISHRA</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6317</td>
+					<td>SHOBHNATH YADAV</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6318</td>
+					<td>OM PRAKASH</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3718</td>
+					<td>RANJEET SINGH-II</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5143</td>
+					<td>SATISH UPADHYAY</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT7345</td>
+					<td>MUKESH YADAV</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT8924</td>
+					<td>PANKAJ PANDEY</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5923</td>
+					<td>HIRAN RAM</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3865</td>
+					<td>MAHESH VARAM</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4183</td>
+					<td>SANJAY KUMAR SINGH</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5305</td>
+					<td>RAMANUJ SINGH</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3864</td>
+					<td>VIJAY SHANKAR YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 11, 2018, 3:35 p.m.</td>
+          <td>0.0</td>
+          <td>156.55846</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4044</td>
+					<td>ARAUN YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 8, 2018, 1:11 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5638</td>
+					<td>JAYRAM RAJBHAR</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5920</td>
+					<td>MANOJ PRAJPATI</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3995</td>
+					<td>JANG BAHADUR YADAV</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5346</td>
+					<td>AJAY KUMAR YADAV</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4046</td>
+					<td>SARVANAD YADAV</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3719</td>
+					<td>AJAY KUMAR-I</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4290</td>
+					<td>SUNIL KUMAR</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4096</td>
+					<td>SIRAJ </td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 8, 2018, 5:09 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3720</td>
+					<td>ASHRAFUDDIN</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3868</td>
+					<td>TAUKIR ALI</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6143</td>
+					<td>MUSTAK AHAMAD</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4092</td>
+					<td>RAJKUMAR</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 30, 2018, 12:06 p.m.</td>
+          <td>0.0</td>
+          <td>13.92282</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6033</td>
+					<td>UPENDRA</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3819</td>
+					<td>KAPILESWAR SINGH</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4184</td>
+					<td>APSHAR KHAN</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5876</td>
+					<td>RAMSHANKAR PANDEY</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 9, 2018, 1:58 p.m.</td>
+          <td>0.0</td>
+          <td>5.5627947</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6167</td>
+					<td>MITIHLESH</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3779</td>
+					<td>ASHIF</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3782</td>
+					<td>SASHIKANT SINGH</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 8, 2018, 2:33 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4093</td>
+					<td>AKHTAR ALI</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6038</td>
+					<td>AWADHESH YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 23, 2018, 10:05 a.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4094</td>
+					<td>GAYASUDDIN</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 25, 2018, 6:33 p.m.</td>
+          <td>0.0</td>
+          <td>41.709476</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3780</td>
+					<td>JAHIR AHAMAD</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 8, 2018, 12:35 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6039</td>
+					<td>AJAJ AHAMAD</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 17, 2018, 3:38 p.m.</td>
+          <td>0.0</td>
+          <td>63.540657</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6032</td>
+					<td>SANJAY KUMAR PANDEY</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 8, 2018, 3:24 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6037</td>
+					<td>RIYALWAL</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 19, 2018, 11:02 a.m.</td>
+          <td>0.0</td>
+          <td>238.65573</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5640</td>
+					<td>GANESH PRASAD</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 29, 2018, 6:07 a.m.</td>
+          <td>0.0</td>
+          <td>42.209286</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3867</td>
+					<td>SHIVKRIT YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 8, 2018, 4:20 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4090</td>
+					<td>RAJENDRA YADAV</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3866</td>
+					<td>RAM NIWAS YADAV</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5919</td>
+					<td>LAL BAHADUR VARMA</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6036</td>
+					<td>RANJEET SINGH-I</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4089</td>
+					<td>SHYAM NARAYAN MAURYA</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3999</td>
+					<td>GURUBACHAN</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 8, 2018, 2:08 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4095</td>
+					<td>GURUDAS</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5921</td>
+					<td>SUNIL KUMAR YADAV</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3998</td>
+					<td>AKHILESH SHUKLA</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 8, 2018, 12:34 p.m.</td>
+          <td>0.0</td>
+          <td>21.567974</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT8923</td>
+					<td>RAMESH YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 8, 2018, 12:39 p.m.</td>
+          <td>0.0</td>
+          <td>2.3269696</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT7093</td>
+					<td>RAVINDRA NATH MAURYA</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 14, 2018, 5:37 a.m.</td>
+          <td>0.0</td>
+          <td>219.14723</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6114</td>
+					<td>RAJ KUMAR YADAV 1</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 17, 2018, 6:03 a.m.</td>
+          <td>0.0</td>
+          <td>9.604206</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3478</td>
+					<td>VIJAY KUMAR DUBEY</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>March 29, 2018, 12:33 p.m.</td>
+          <td>0.0</td>
+          <td>0.30123293</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6436</td>
+					<td>HARI LAL PRASAD</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 22, 2018, 6:42 p.m.</td>
+          <td>0.0</td>
+          <td>80.32351</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6119</td>
+					<td>MANOJ SAROJ</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 26, 2018, 1:58 p.m.</td>
+          <td>0.0</td>
+          <td>178.69492</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6314</td>
+					<td>SUNIL KUMAR SHARMA</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6402</td>
+					<td>JAWED AHEMAD</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 25, 2018, 10:35 a.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6310</td>
+					<td>TRAIYAMBAK KUMAR CHAUBEY</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 17, 2018, 6:49 p.m.</td>
+          <td>0.0</td>
+          <td>278.38394</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5412</td>
+					<td>RAVI SHANKAR YADAV</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6404</td>
+					<td>DEEPAK KUMAR SINGH</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 2, 2018, 5:11 p.m.</td>
+          <td>0.0</td>
+          <td>1.983554</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6307</td>
+					<td>BACHHE LAL</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4837</td>
+					<td>AJAY KUMAR YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 17, 2018, 10:57 a.m.</td>
+          <td>0.0</td>
+          <td>54.712032</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6164</td>
+					<td>AJAY KUMAR YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 17, 2018, 5:49 p.m.</td>
+          <td>0.0</td>
+          <td>278.38394</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6475</td>
+					<td>AVANISH YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 10, 2018, 6:47 p.m.</td>
+          <td>0.0</td>
+          <td>169.4216</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6523</td>
+					<td>AMIT YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>March 30, 2018, 12:14 p.m.</td>
+          <td>0.0</td>
+          <td>0.09387539</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3426</td>
+					<td>RAM NIWASH PANDEY</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6117</td>
+					<td>RAJJAK ALI</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6142</td>
+					<td>KAMLESH KUMAR YADAV </td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 20, 2018, 3:49 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT7092</td>
+					<td>SUJEET KUMAR YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 28, 2018, 6:26 a.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3422</td>
+					<td>SUJEET KUMAR SINGH </td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>March 29, 2018, 12:11 a.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3479</td>
+					<td>YOGENDRA SINGH</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>March 30, 2018, 12:35 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6761</td>
+					<td>RAM KARAN YADAV</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6308</td>
+					<td>MANNA LAL </td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 25, 2018, 11:28 p.m.</td>
+          <td>0.0</td>
+          <td>19.48387</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5830</td>
+					<td>ARUN KUMAR CHAUBEY</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 16, 2018, 5:17 p.m.</td>
+          <td>0.0</td>
+          <td>74.883804</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6313</td>
+					<td>AKHILESH SINGH</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 8, 2018, 6:05 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3424</td>
+					<td>RAM ASHISH YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>March 29, 2018, 11:47 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6999</td>
+					<td>SHIVSHANKAR YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 20, 2018, 12:27 p.m.</td>
+          <td>0.0</td>
+          <td>85.48552</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6403</td>
+					<td>MOHAN LAL</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 16, 2018, 5:17 p.m.</td>
+          <td>0.0</td>
+          <td>74.883804</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6462</td>
+					<td>SHRAVAN KUMAR</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5789</td>
+					<td>RANSUDAN UPADHYAY</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 6, 2018, 11:01 a.m.</td>
+          <td>0.0</td>
+          <td>401.5102</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6552</td>
+					<td>SATISH SINGH </td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 13, 2018, 7:52 a.m.</td>
+          <td>0.0</td>
+          <td>11.432451</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6759</td>
+					<td>DHARM VEER MAURYA</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 15, 2018, 1:29 p.m.</td>
+          <td>0.0</td>
+          <td>260.52682</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6553</td>
+					<td>SANTOSH KUMAR SHARMA</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 3, 2018, 6:14 a.m.</td>
+          <td>0.0</td>
+          <td>21.514933</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6998</td>
+					<td>BRIJESHWARI PRADASH DRIVEDI</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 16, 2018, 7:45 p.m.</td>
+          <td>0.0</td>
+          <td>18.87082</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5515</td>
+					<td>SEWALAL</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6762</td>
+					<td>MAHENDRA NATH PANDEY</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 7, 2018, 2:30 p.m.</td>
+          <td>0.0</td>
+          <td>80.32351</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6524</td>
+					<td>SANJAY PAL</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 15, 2018, 2:11 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6311</td>
+					<td>VINOD KUMAR YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 15, 2018, 9:18 a.m.</td>
+          <td>0.0</td>
+          <td>21.663698</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6435</td>
+					<td>CHANDRSEKHER TIVARY</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 1, 2018, 6:18 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3425</td>
+					<td>JAY PRAKASH SINGH</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>March 29, 2018, 4:30 p.m.</td>
+          <td>0.0</td>
+          <td>63.21333</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT7091</td>
+					<td>MANNA LAL </td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 22, 2018, 6:45 a.m.</td>
+          <td>0.0</td>
+          <td>105.609604</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5514</td>
+					<td>RAJESH KUMAR YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 21, 2018, 12:21 p.m.</td>
+          <td>0.0</td>
+          <td>79.26124</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6165</td>
+					<td>SANJAY KUMAR VERMA</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6239</td>
+					<td>BINDU SINGH</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 4, 2018, 1:33 p.m.</td>
+          <td>0.0</td>
+          <td>23.693214</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5347</td>
+					<td>DILIP KUMAR TRIPATHI</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 19, 2018, 11:23 a.m.</td>
+          <td>0.0</td>
+          <td>2.5318265</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6115</td>
+					<td>RADHESYAM SINGH</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 11, 2018, 2:22 p.m.</td>
+          <td>0.0</td>
+          <td>30.834318</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6168</td>
+					<td>BASHANT KUMAR YADAV</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 13, 2018, 10:57 a.m.</td>
+          <td>0.0</td>
+          <td>265.47623</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5511</td>
+					<td>GUDDU SINGH</td>
+					<td>INVALID_REQUEST</td>
+					<td>March 26, 2018, 12:12 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5788</td>
+					<td>CHANDRA BHAN PANDEY</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 20, 2018, 6:04 p.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6306</td>
+					<td>SURENDRA KUMAR SINGH</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 24, 2018, 6:07 a.m.</td>
+          <td>0.0</td>
+          <td>19.464705</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6118</td>
+					<td>Ajay Kumar</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>April 19, 2018, 6:02 a.m.</td>
+          <td>0.0</td>
+          <td>35.344917</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3477</td>
+					<td>NA</td>
+					<td>INVALID_REQUEST</td>
+					<td>April 15, 2018, 9:46 a.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3640</td>
+					<td>NOT AVAILABLE</td>
+					<td>INVALID_REQUEST</td>
+					<td>April 15, 2018, 9:47 a.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6537</td>
+					<td>UNAVAILABLE</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 15, 2018, 7:31 p.m.</td>
+          <td>0.0</td>
+          <td>7.164405</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT3423</td>
+					<td>NOT_AVAILABLE</td>
+					<td>INVALID_REQUEST</td>
+					<td>April 15, 2018, 9:48 a.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT4281</td>
+					<td>NOT@AVAILABLE</td>
+					<td>INVALID_REQUEST</td>
+					<td>April 15, 2018, 9:49 a.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5413</td>
+					<td>NOT@AVAILABLE_</td>
+					<td>INVALID_REQUEST</td>
+					<td>April 15, 2018, 9:49 a.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT5513</td>
+					<td>NOT@AVAILABLE_1</td>
+					<td>OVER_QUERY_LIMIT</td>
+					<td>May 23, 2018, 7:24 a.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6141</td>
+					<td>NOT@AVAILABLE_2</td>
+					<td>INVALID_REQUEST</td>
+					<td>April 15, 2018, 9:50 a.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+        
+         <tr style="background: palevioletred;">
+        
+					<td>False</td>
+
+					<td>UP65AT6166</td>
+					<td>NOT@AVAILABLE_3</td>
+					<td>INVALID_REQUEST</td>
+					<td>April 15, 2018, 9:50 a.m.</td>
+          <td>0.0</td>
+          <td>0.0</td>
+          <td></td>
+        </tr>
+        
+
+			</tbody>
+		</table>
+
+	</div>
+</div></div>
+</div>
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+
+    <strong>Copyright © 2016-2017 <a href="http://inotracks.com/">InoTracks</a>.</strong> All rights
+    reserved.
+  </footer>
+
+</div>
+<!-- ./wrapper -->
+<!-- jQuery UI 1.11.4 -->
+<script src="./Tabular View_files/jquery-ui.min.js.download"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<!-- jQuery 2.2.3 -->
+
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.6 -->
+<script src="./Tabular View_files/bootstrap.min.js(1).download"></script>
+<!-- Morris.js charts -->
+<script src="./Tabular View_files/raphael-min.js.download"></script>
+<script src="./Tabular View_files/morris.min.js.download"></script>
+<!-- Sparkline -->
+<script src="./Tabular View_files/jquery.sparkline.min.js.download"></script>
+<!-- jvectormap -->
+<script src="./Tabular View_files/jquery-jvectormap-1.2.2.min.js.download"></script>
+<script src="./Tabular View_files/jquery-jvectormap-world-mill-en.js.download"></script>
+<!-- jQuery Knob Chart -->
+<script src="./Tabular View_files/jquery.knob.js.download"></script>
+<!-- daterangepicker -->
+<script src="./Tabular View_files/moment.min.js.download"></script>
+<script src="./Tabular View_files/daterangepicker.js.download"></script>
+<!-- datepicker -->
+<script src="./Tabular View_files/bootstrap-datepicker.js.download"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="./Tabular View_files/bootstrap3-wysihtml5.all.min.js.download"></script>
+<!-- Slimscroll -->
+<script src="./Tabular View_files/jquery.slimscroll.min.js.download"></script>
+<!-- FastClick -->
+<script src="./Tabular View_files/fastclick.js.download"></script>
+<!-- AdminLTE App -->
+<script src="./Tabular View_files/app.min.js.download"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<!--<script src="dist/js/pages/Mapview.js"></script>-->
+<!-- AdminLTE for demo purposes -->
+<script src="./Tabular View_files/demo.js.download"></script>
+
+
+
+
+</body></html>

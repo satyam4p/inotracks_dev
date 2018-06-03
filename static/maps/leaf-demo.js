@@ -2,14 +2,21 @@
 
 var myURL = jQuery( 'script[src$="leaf-demo.js"]' ).attr( 'src' ).replace( 'leaf-demo.js', '' )
 
-var myIcon = L.icon({
-  iconUrl: myURL + 'images/pin24.png',
-  iconRetinaUrl: myURL + 'images/pin48.png',
+var myIconGreen = L.icon({
+  iconUrl: myURL + 'images/greenpin-1.png',
+  iconRetinaUrl: myURL + '/images/greenpin-2.png',                      
   iconSize: [29, 24],
   iconAnchor: [9, 21],
   popupAnchor: [0, -14]
 })
 
+var myIconRed = L.icon({
+  iconUrl: myURL + 'images/redpin-1.png',
+  iconRetinaUrl: myURL + 'images/redpin-2.png',                         
+  iconSize: [29, 24],
+  iconAnchor: [9, 21],
+  popupAnchor: [0, -14]
+})
 
 
 
@@ -56,10 +63,21 @@ var markers = new Array();
           <span>Distance Data: <b>`+ data[i]['running_status'] +`</b></span><br>
         </div>
   `
- marker_= L.marker( [parseFloat(cordi['lat']), parseFloat(cordi['lng'])], {icon: myIcon} )
-   .bindPopup( html)
-  .addTo( map );
-    
+
+
+ if(data[i]['running_status']){
+    marker_= L.marker( [parseFloat(data[i]['latitude']), parseFloat(data[i]['longitude'])], {icon: myIconGreen} )
+    .bindPopup( html)
+    .addTo( map );
+    marker_['bus_number']=data[i]['bus_number'];
+  }else{
+    marker_= L.marker( [parseFloat(data[i]['latitude']), parseFloat(data[i]['longitude'])], {icon: myIconRed} )
+    .bindPopup( html)
+    .addTo( map );
+
+  }
+  
+
   markers.push(marker_);
 }
 
