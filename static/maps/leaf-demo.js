@@ -22,13 +22,17 @@ var myIconRed = L.icon({
 
 function show_the_map(data){
 
-var no_of_buses = Object.keys(data).length;
+var no_of_locations = data['number_of_locations'];
+var marker_;
+var markers = new Array();
 
-      if (no_of_buses>0 && data[0]['latitude']!=null){
+  for ( var i=0; i < no_of_locations; i++ )
+  {
+      if (data['locations']['i']!=null){
 
           var cordi = {
-            'lat':parseFloat(data[0]['latitude']),
-            'lng': parseFloat(data[0]['longitude'])
+            'lat':parseFloat(data['locations']['i']['latitude']),
+            'lng': parseFloat(data['locations']['i']['longitude'])
           };
         }
           else{
@@ -37,7 +41,8 @@ var no_of_buses = Object.keys(data).length;
               'lng': 77.1025
             };
           }
-
+  
+   if(i==0){
     var map = L.map( 'map', {
 
       center: [cordi['lat'],cordi['lng']],
@@ -49,20 +54,17 @@ var no_of_buses = Object.keys(data).length;
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       subdomains: ['a', 'b', 'c']
     }).addTo( map )
-
-var marker_;
-var markers = new Array();
-for ( var i=0; i < no_of_buses; i++ )
-{
-try{
+   }
+    try{
   var html = `
         <div>
-          <span>Bus Number: <b>` + data[i]['bus_number'] + `</b></span><br>
-          <span>Driver Name: <b>`+ data[i]['driver']+ `</b></span><br>
-          <span>Running Status: <b>`+ data[i]['running_status'] +`</b></span><br>
-          <span>Shifts: <b>`+ data[i]['shifts'] + `</b></span><br>
+          <span>Speed Data: <b>` + data[i]['bus_number'] + `</b></span><br>
+          <span>Fuel Data: <b>`+ data[i]['driver']+ `</b></span><br>
+          <span>Distance Data: <b>`+ data[i]['running_status'] +`</b></span><br>
         </div>
   `
+
+
  if(data[i]['running_status']){
     marker_= L.marker( [parseFloat(data[i]['latitude']), parseFloat(data[i]['longitude'])], {icon: myIconGreen} )
     .bindPopup( html)
@@ -75,13 +77,37 @@ try{
 
   }
   
+
   markers.push(marker_);
 }
+
 catch(err){}
+
 }
+  
 return markers;
 };
 
+
+function addPathBetweenMarkers(markers){
+
+ for(i=1; i<markers.length;i++){
+    
+    var latlngs = Array();
+
+    //Get latlng from first marker
+    latlngs.push(markers[i-1].getLatLng());
+
+    //Get latlng from first marker
+    latlngs.push(markers[i].getLatLng());
+
+//You can just keep adding markers
+
+//From documentation http://leafletjs.com/reference.html#polyline
+// create a red polyline from an arrays of LatLng points
+    var polyline = L.polyline(latlngs, {color: 'yellow'}).addTo(map);  
+   }
+}
 
 
 function changeMarkerPosition(marker) {
@@ -117,18 +143,26 @@ catch(err){
 initialize() ;
 function initialize() {
   
-  $.ajax({
+ /* $.ajax({
     url: '/api/web/get_bus_locations/',
     type: 'GET',
+    dataType: 'json',
+  })*/
+  $.ajax({
+    url: 'http://13.58.183.35/api/get_bus_data_from_time/',
+    type: 'POST',
     dataType: 'json',
   })
   .done(function(data) {
     console.log(data);
     
     var markers=show_the_map(data);
+    addPathBetweenMarkers(markers);
+    
     for(var i=0; i<markers.length; i++){
       // changeMarkerPosition(markers[i]);
       setInterval(changeMarkerPosition, 1000, markers[i]);
+      
     }
   })
   .fail(function() {
