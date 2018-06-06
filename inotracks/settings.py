@@ -22,7 +22,7 @@ SECRET_KEY = 'xq_4^sexzk%kbryslfhcxygc49ws=%v&52+d-^&+(qp)bw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True                              
 
-ALLOWED_HOSTS = ['www.inotracks.com','inotracks.com','13.58.183.35']
+#ALLOWED_HOSTS = ['www.inotracks.com','inotracks.com','13.58.183.35']
 
 
 # Application definition
@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_inotracks',
-        'USER': 'ino',
-        'PASSWORD': 'inotracks',
+        'USER': 'root',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '',
         'charset': 'utf8mb4',

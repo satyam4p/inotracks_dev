@@ -14,4 +14,9 @@ urlpatterns = [
     url(r'^web/get_fuel_data/', get_fuel_data),
     url(r'^get_bus_data_user/', get_bus_data_from_user),
     url(r'^get_stop_data_from_time/', get_stop_data_from_time),
+
+    url(r'^update_status/', update_status),
+
+    url(r'^get_json_from_csv/', get_json_from_csv),
 ]
+

@@ -51,13 +51,13 @@ class BusParameter(models.Model):
 
 
 class Bus(models.Model):
-    owner = models.ForeignKey(InoUser)
-    driver = models.OneToOneField(InoDriver)
+    owner = models.ForeignKey(InoUser, on_delete=models.CASCADE)
+    driver = models.OneToOneField(InoDriver, on_delete=models.CASCADE)
     bus_number = models.CharField(max_length=100)
-    location = models.OneToOneField(Location)
+    location = models.OneToOneField(Location, on_delete=models.CASCADE)
     running_status = models.BooleanField(default=False)
     shifts = models.IntegerField(default=0)
-    parameters = models.OneToOneField(BusParameter)
+    parameters = models.OneToOneField(BusParameter, on_delete=models.CASCADE)
 
     def __str__(self):
         return "%s" % self.bus_number
@@ -68,7 +68,7 @@ class Bus(models.Model):
 
 
 class Stop(models.Model):
-    location = models.ForeignKey(Location)
+    location = models.ForeignKey(Location, on_delete=models.CASCADE)
     arrival_time = models.DateTimeField()
     departure_time = models.DateTimeField()
     halt_time = models.DurationField(null=True, blank=True)
@@ -82,7 +82,7 @@ class Stop(models.Model):
 
 
 class TimeTable(models.Model):
-    bus = models.OneToOneField(Bus)
+    bus = models.OneToOneField(Bus, on_delete=models.CASCADE)
     stoppage = models.ManyToManyField(Stop)
 
     def __str__(self):

@@ -29,16 +29,20 @@ def marker_update(request):
     user = request.user
     # print(user)
     if user.is_authenticated():
-        bus_number = request.GET['bus_number']
-        bus = Bus.objects.get(bus_number=bus_number)
-        response_data = {
-            'lat': bus.location.latitude,
-            'lng': bus.location.longitude,
-        }
-        return HttpResponse(
-            json.dumps(response_data),
-            content_type = "application/json"
-            )
+        try:
+            bus_number = request.GET['bus_number']
+            bus = Bus.objects.get(bus_number=bus_number)
+            response_data = {
+                'lat': bus.location.latitude,
+                'lng': bus.location.longitude,
+            }
+            return HttpResponse(
+                json.dumps(response_data),
+                content_type = "application/json"
+                )
+        except:
+            return HttpResponse("Invalid Request")
+            pass
     else:
         return HttpResponse("Invalid Request")
 

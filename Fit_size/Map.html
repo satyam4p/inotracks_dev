@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://www.inotracks.com/map/# -->
+<html style="height: auto;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Map</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="./Map_files/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./Map_files/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="./Map_files/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="./Map_files/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="./Map_files/_all-skins.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="./Map_files/blue.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="./Map_files/morris.css">
+  <!-- jvectormap -->
+<!--   <link rel="stylesheet" href="/static/plugins/jvectormap/jquery-jvectormap-1.2.2.css"> -->
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="./Map_files/datepicker3.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="./Map_files/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="./Map_files/bootstrap3-wysihtml5.min.css">
+<!-- /*map by mukesh====================================
+ -->
+
+
+    <link rel="stylesheet" type="text/css" href="./Map_files/leaflet.css">
+
+    <script type="text/javascript" src="./Map_files/jquery.min.js.download"></script>
+    <script type="text/javascript" src="./Map_files/leaflet.js.download"></script>
+
+
+  <style>
+    #map_wrapper {
+    height: 400px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+    </style>
+
+
+
+
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+<body class="skin-blue sidebar-mini" style="height: auto;">
+<div class="wrapper" style="height: auto;">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="http://www.inotracks.com/map/index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>I</b>no</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Ino</b>Tracks</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="http://www.inotracks.com/map/#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="http://www.inotracks.com/map/#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="./Map_files/avatar04.png" class="user-image" alt="User Image">
+              <span class="hidden-xs">vctsl</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="./Map_files/avatar04.png" class="img-circle" alt="User Image">
+
+                <p>
+                  Varanasi City Transport Services
+                </p>
+              </li>
+
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="http://www.inotracks.com/map/#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="http://www.inotracks.com/logout" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar" style="height: auto;">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="./Map_files/avatar04.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Varanasi City Transport Services</p>
+          <a href="http://www.inotracks.com/map/#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="http://www.inotracks.com/map/#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search for Bus...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="active treeview">
+          <a href="http://www.inotracks.com/map/#">
+            <i class="fa fa-dashboard"></i> <span>Map View</span>
+          </a>
+         </li>
+        <li class="treeview">
+          <a href="http://www.inotracks.com/tabular-view">
+            <i class="fa fa-files-o"></i>
+            <span>Tabular View</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.inotracks.com/map/#">
+            <i class="fa fa-th"></i> <span>Speed</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="http://www.inotracks.com/map/#">
+            <i class="fa fa-pie-chart"></i>
+            <span>Running Buses</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="http://www.inotracks.com/time-table">
+            <i class="fa fa-laptop"></i>
+            <span>Time Tables</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="http://www.inotracks.com/map/#">
+            <i class="fa fa-calendar"></i> <span>Routes</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.inotracks.com/map/#">
+            <i class="fa fa-envelope"></i> <span>Route Violation</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="http://www.inotracks.com/map/#">
+            <i class="fa fa-folder"></i> <span>Fuel</span>
+            </a></li>
+            <li class="treeview">
+          <a href="http://www.inotracks.com/map/#">
+            <i class="fa fa-folder"></i> <span>About Us</span>
+            </a></li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" style="min-height: 824px; height: 500px;">
+    <!-- Content Header (Page header) -->
+    <section class="pull-right">
+          <a href="http://www.inotracks.com/map/" class="btn btn-default" id="refresh-shifts"><i class="fa fa-refresh"></i> Refresh Shifts</a>
+	  </section>
+    <div id="map_wrapper" style="height:540px;">
+      <div id="map" class="leaflet-container leaflet-fade-anim" tabindex="0" style="position: relative;height: 830px;"><div class="leaflet-map-pane" style="transform: translate3d(75px, 292px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container leaflet-zoom-animated" style=""></div><div class="leaflet-tile-container leaflet-zoom-animated" style=""><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/53.png" style="height: 256px; width: 256px; left: 440px; top: 183px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/54.png" style="height: 256px; width: 256px; left: 440px; top: 439px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/53(1).png" style="height: 256px; width: 256px; left: 184px; top: 183px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/52.png" style="height: 256px; width: 256px; left: 440px; top: -73px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/53(2).png" style="height: 256px; width: 256px; left: 696px; top: 183px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/54(1).png" style="height: 256px; width: 256px; left: 696px; top: 439px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/52(1).png" style="height: 256px; width: 256px; left: 696px; top: -73px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/54(2).png" style="height: 256px; width: 256px; left: 184px; top: 439px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/52(2).png" style="height: 256px; width: 256px; left: 184px; top: -73px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/53(3).png" style="height: 256px; width: 256px; left: 952px; top: 183px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/53(4).png" style="height: 256px; width: 256px; left: -72px; top: 183px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/52(3).png" style="height: 256px; width: 256px; left: 952px; top: -73px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/52(4).png" style="height: 256px; width: 256px; left: -72px; top: -73px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/54(3).png" style="height: 256px; width: 256px; left: -72px; top: 439px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/54(4).png" style="height: 256px; width: 256px; left: 952px; top: 439px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/53(5).png" style="height: 256px; width: 256px; left: 1208px; top: 183px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/52(5).png" style="height: 256px; width: 256px; left: 1208px; top: -73px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/54(5).png" style="height: 256px; width: 256px; left: 1208px; top: 439px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/51.png" style="height: 256px; width: 256px; left: 696px; top: -329px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/51(1).png" style="height: 256px; width: 256px; left: 440px; top: -329px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/51(2).png" style="height: 256px; width: 256px; left: 952px; top: -329px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/51(3).png" style="height: 256px; width: 256px; left: 184px; top: -329px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/51(4).png" style="height: 256px; width: 256px; left: 1208px; top: -329px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/51(5).png" style="height: 256px; width: 256px; left: -72px; top: -329px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/52(6).png" style="height: 256px; width: 256px; left: -328px; top: -73px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/52(7).png" style="height: 256px; width: 256px; left: 1464px; top: -73px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/53(6).png" style="height: 256px; width: 256px; left: -328px; top: 183px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/53(7).png" style="height: 256px; width: 256px; left: 1464px; top: 183px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/51(6).png" style="height: 256px; width: 256px; left: -328px; top: -329px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/51(7).png" style="height: 256px; width: 256px; left: 1464px; top: -329px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/54(6).png" style="height: 256px; width: 256px; left: -328px; top: 439px;"><img class="leaflet-tile leaflet-tile-loaded" src="./Map_files/54(7).png" style="height: 256px; width: 256px; left: 1464px; top: 439px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"></div><div class="leaflet-marker-pane"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(829px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(825px, 621px, 0px); z-index: 621;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 621px, 0px); z-index: 621;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 621px, 0px); z-index: 621;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(813px, 608px, 0px); z-index: 608;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(828px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(827px, 620px, 0px); z-index: 620;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(828px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 621px, 0px); z-index: 621;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(829px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(828px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(834px, 606px, 0px); z-index: 606;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(828px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(829px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(830px, 621px, 0px); z-index: 621;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(844px, 621px, 0px); z-index: 621;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(828px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(837px, 619px, 0px); z-index: 619;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(827px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(828px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(828px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(828px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(838px, 640px, 0px); z-index: 640;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(863px, 593px, 0px); z-index: 593;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(828px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(828px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(850px, 664px, 0px); z-index: 664;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(828px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(825px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(824px, 612px, 0px); z-index: 612;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(805px, 586px, 0px); z-index: 586;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(821px, 611px, 0px); z-index: 611;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 621px, 0px); z-index: 621;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(822px, 611px, 0px); z-index: 611;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 621px, 0px); z-index: 621;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(818px, 609px, 0px); z-index: 609;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(802px, 620px, 0px); z-index: 620;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(825px, 613px, 0px); z-index: 613;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(825px, 613px, 0px); z-index: 613;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(814px, 605px, 0px); z-index: 605;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(828px, 614px, 0px); z-index: 614;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(825px, 613px, 0px); z-index: 613;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(813px, 602px, 0px); z-index: 602;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(821px, 617px, 0px); z-index: 617;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(816px, 620px, 0px); z-index: 620;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(827px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 621px, 0px); z-index: 621;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(799px, 626px, 0px); z-index: 626;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(826px, 615px, 0px); z-index: 615;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(825px, 621px, 0px); z-index: 621;"><img src="./Map_files/pin24.png" class="leaflet-marker-icon leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -9px; margin-top: -21px; width: 29px; height: 24px; transform: translate3d(811px, 599px, 0px); z-index: 599;"></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="http://www.inotracks.com/map/#" title="Zoom in">+</a><a class="leaflet-control-zoom-out" href="http://www.inotracks.com/map/#" title="Zoom out">-</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="http://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a></div></div></div></div>
+	  
+      
+
+      </div>
+
+
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+
+    <strong>Copyright © 2016-2017 <a href="http://inotracks.com/">InoTracks</a>.</strong> All rights
+    reserved.
+  </footer>
+
+</div>
+
+<!-- map by mukesh -->
+<script type="text/javascript" src="./Map_files/markers.json"></script>
+    <script type="text/javascript" src="./Map_files/leaf-demo.js.download"></script>
+
+
+<!-- ./wrapper -->
+
+<!-- jQuery 2.2.3 -->
+<script src="./Map_files/jquery-2.2.3.min.js.download"></script>
+<!-- jQuery UI 1.11.4 -->
+
+<script src="./Map_files/jquery-ui.min.js.download"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.6 -->
+<script src="./Map_files/bootstrap.min.js.download"></script>
+<!-- Morris.js charts -->
+<script src="./Map_files/raphael-min.js.download"></script>
+<script src="./Map_files/morris.min.js.download"></script>
+<!-- Sparkline -->
+<script src="./Map_files/jquery.sparkline.min.js.download"></script>
+<!-- jvectormap -->
+<!-- <script src="/static/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="/static/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script> -->
+<!-- jQuery Knob Chart -->
+<script src="./Map_files/jquery.knob.js.download"></script>
+<!-- daterangepicker -->
+<script src="./Map_files/moment.min.js.download"></script>
+<script src="./Map_files/daterangepicker.js.download"></script>
+<!-- datepicker -->
+<script src="./Map_files/bootstrap-datepicker.js.download"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="./Map_files/bootstrap3-wysihtml5.all.min.js.download"></script>
+<!-- Slimscroll -->
+<script src="./Map_files/jquery.slimscroll.min.js.download"></script>
+<!-- FastClick -->
+<script src="./Map_files/fastclick.js.download"></script>
+<!-- AdminLTE App -->
+<script src="./Map_files/app.min.js.download"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<!--<script src="dist/js/pages/Mapview.js"></script>-->
+<!-- AdminLTE for demo purposes -->
+<script src="./Map_files/demo.js.download"></script>
+ 
+<!-- <script src="/static/js/map.js" charset="utf-8"></script> -->
+<script type="text/javascript">
+$("#refresh-shifts").click(function(e) {
+  // console.log("clicked");
+  e.preventDefault();
+  $.ajax({
+      type: "GET",
+      url: "/buses/refresh-shifts/",
+      success: function(result) {
+          console.log('Shift Update Success:' + result['success']);
+      },
+      error: function(result) {
+          console.log('Error in updating shifts');
+          console.log(result);
+      }
+  });
+});
+</script>
+
+
+</body></html>
