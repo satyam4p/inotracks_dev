@@ -333,6 +333,14 @@ def update_status(request):
         return render(request, template, {})
     if request.method == 'POST':
         raise Http404("adasd")
+        
+def get_current_driver(request,pk=None):
+    driver=UpdateStatus.objects.all
+    current_driver=driver.new_driver
+    last_driver=driver.previous_driver
+
+    template='tabularview.html'
+    return render(request,template,context={'current_driver':current_driver})
 
 def get_json_from_csv(request):
     if request.method == "GET":
