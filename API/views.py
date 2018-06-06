@@ -1,5 +1,6 @@
 from django.shortcuts import render, Http404, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from .models import UpdateStatus
 import json
 from datetime import datetime, timedelta
 from django.contrib.auth import authenticate
