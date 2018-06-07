@@ -27,7 +27,7 @@ def new_location_being_saved(sender, instance, *args, **kwargs):
 
     # get busparam of this bus number
     try:
-        bus_param = BusParameter.objects.get(bus_number=bus_number)
+        bus_param = BusParameter.objects.filter(bus_number=bus_number).latest('time_recorded')
     except ObjectDoesNotExist:
         return
 
